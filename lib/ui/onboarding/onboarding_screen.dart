@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../data/onboarding.dart';
 import '../home/home_page.dart';
+import 'dot_indicator.dart';
 import 'onboarding_content.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -110,16 +111,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(
                       contents.length,
-                      (index) => AnimatedContainer(
-                        duration: const Duration(milliseconds: 300),
-                        margin: const EdgeInsets.only(right: 5),
-                        height: 10,
-                        width: _currentPage == index ? 20 : 10,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
+                      (index) =>
+                          DotIndicator(index: index, currentPage: _currentPage),
                     ),
                   ),
                   const SizedBox(height: 15),

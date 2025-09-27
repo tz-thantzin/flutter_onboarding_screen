@@ -24,6 +24,6 @@ List<OnboardingContents> contents = [
   OnboardingContents(
     title: "Get Started",
     image: "assets/images/onboarding_3.png",
-    desc: "Track your tasks easily and efficiently.",
+    desc: "Start using the app now and explore all features!",
   ),
 ];
